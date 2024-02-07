@@ -1,5 +1,5 @@
 import asyncio
-
+from settings import app_settings
 import uvicorn
 from fastapi import FastAPI
 
@@ -14,9 +14,9 @@ async def main():
     """Run the server"""
     config = uvicorn.Config(
         app,
-        host="0.0.0.0",
-        port=8000,
-        log_level="info",
+        host=app_settings.host,
+        port=app_settings.port,
+        log_level=app_settings.log_level,
     )
     server = uvicorn.Server(config)
     await server.serve()
