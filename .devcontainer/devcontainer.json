@@ -24,7 +24,16 @@
 				"eamodio.gitlens",
 				"mtxr.sqltools",
 				"mtxr.sqltools-driver-pg"
-			]
+			],
+			"settings": {
+				"sqltools.connections": [
+					{
+						"name": "Local",
+						"driver": "PostgreSQL",
+						"connectString": "postgresql://postgres:postgres@db:5432/postgres"
+					}
+				]
+			}
 		}
 	}
 
